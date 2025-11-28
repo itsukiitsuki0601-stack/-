@@ -1,0 +1,256 @@
+/* ベース */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background: #faf6f2;
+}
+
+/* 共通 */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-light {
+  background: #fff;
+}
+
+.section-accent {
+  background: #ffe7d8;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-lead {
+  text-align: center;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ヘッダー */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.nav a:hover {
+  color: #e4572e;
+}
+
+/* ヒーロー */
+.hero {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  padding: 3rem 0 3.5rem;
+}
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1 1 280px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+}
+
+.hero-image {
+  flex: 1 1 260px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* ボタン */
+.btn-primary {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  background: #e4572e;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* コンセプト */
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.concept-item {
+  background: #fff7ef;
+  border-radius: 12px;
+  padding: 1.2rem;
+}
+
+/* 商品 */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.product-card h3 {
+  margin-top: 0;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0.2rem 0 0.4rem;
+}
+
+.product-tag {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: #ffe7d8;
+  color: #d1431b;
+  margin-bottom: 0.6rem;
+}
+
+.product-detail {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
+/* ご注文方法 */
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.order-form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-row label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+/* FAQ */
+.faq-item + .faq-item {
+  margin-top: 1.2rem;
+}
+
+.faq-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* フッター */
+.site-footer {
+  border-top: 1px solid #eee;
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* スマホ対応 */
+@media (max-width: 640px) {
+  .nav {
+    display: none; /* 最初はシンプルに隠す。必要ならハンバーガーメニュー作成 */
+  }
+  .hero {
+    padding-top: 2.2rem;
+  }
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+}
