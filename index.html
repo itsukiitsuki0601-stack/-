@@ -16,6 +16,7 @@
       <nav class="nav">
         <a href="#concept">こだわり</a>
         <a href="#products">商品一覧</a>
+        <a href="#custom">カスタムキムチ</a>  <!-- これ追加 -->
         <a href="#order">ご注文方法</a>
         <a href="#faq">よくある質問</a>
       </nav>
@@ -63,173 +64,141 @@
   <section id="products" class="section">
     <div class="container">
 <!-- カスタムキムチ -->
-<section id="custom-kimchi" class="section section-light">
+<section id="custom" class="section section-custom">
   <div class="container">
     <h2 class="section-title">カスタムキムチを作る</h2>
     <p class="section-lead">
-      好きな野菜・辛さ・具材を選んで、あなただけのオーダーメイドキムチを仕込みます。
+      ベースの野菜や辛さ、具材を選んで、あなただけの「オーダーメイドキムチ」をお作りします。
     </p>
 
     <div class="custom-grid">
-      <!-- 左：カスタムフォーム -->
-      <form class="custom-form">
-        <!-- STEP 1 ベース野菜 -->
+      <!-- 左：選択フォーム -->
+      <div class="custom-form">
+        <!-- STEP 1 -->
         <div class="custom-step">
-          <div class="step-label">STEP 1</div>
-          <h3>ベースの野菜を選ぶ</h3>
-          <p class="step-desc">メインになる野菜を1つ選んでください。</p>
-          <label class="option-row">
-            <input type="radio" name="base" value="白菜" checked>
-            <span>白菜キムチ（基本の王道）</span>
-          </label>
-          <label class="option-row">
-            <input type="radio" name="base" value="大根">
-            <span>大根キムチ（カクテキ）</span>
-          </label>
-          <label class="option-row">
-            <input type="radio" name="base" value="きゅうり">
-            <span>きゅうりキムチ（オイキムチ）</span>
-          </label>
-          <label class="option-row">
-            <input type="radio" name="base" value="ミックス野菜">
-            <span>ミックス野菜（おまかせ）</span>
-          </label>
+          <h3><span class="step-badge">STEP 1</span> ベースの野菜を選ぶ</h3>
+          <div class="option-row">
+            <label><input type="radio" name="base" checked> 白菜キムチ</label>
+            <label><input type="radio" name="base"> 大根キムチ（カクテキ）</label>
+            <label><input type="radio" name="base"> きゅうりキムチ</label>
+            <label><input type="radio" name="base"> ミックス（おまかせ）</label>
+          </div>
         </div>
 
-        <!-- STEP 2 辛さ -->
+        <!-- STEP 2 -->
         <div class="custom-step">
-          <div class="step-label">STEP 2</div>
-          <h3>辛さレベル</h3>
-          <p class="step-desc">辛いのが苦手な方から激辛好きまで。</p>
-          <label class="option-row">
-            <input type="radio" name="spice" value="マイルド">
-            <span>マイルド（★☆☆☆☆）</span>
-          </label>
-          <label class="option-row">
-            <input type="radio" name="spice" value="ふつう" checked>
-            <span>ふつう（★★★☆☆）</span>
-          </label>
-          <label class="option-row">
-            <input type="radio" name="spice" value="辛め">
-            <span>辛め（★★★★☆）</span>
-          </label>
-          <label class="option-row">
-            <input type="radio" name="spice" value="激辛">
-            <span>激辛（★★★★★）</span>
-          </label>
+          <h3><span class="step-badge">STEP 2</span> 味のバランス</h3>
+
+          <div class="option-group">
+            <p class="option-label">辛さレベル</p>
+            <div class="pill-row">
+              <label class="pill"><input type="radio" name="spicy"> 控えめ</label>
+              <label class="pill"><input type="radio" name="spicy" checked> ふつう</label>
+              <label class="pill"><input type="radio" name="spicy"> 辛め</label>
+              <label class="pill"><input type="radio" name="spicy"> 激辛</label>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <p class="option-label">にんにく</p>
+            <div class="pill-row">
+              <label class="pill"><input type="radio" name="garlic"> なし</label>
+              <label class="pill"><input type="radio" name="garlic" checked> ふつう</label>
+              <label class="pill"><input type="radio" name="garlic"> しっかり</label>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <p class="option-label">甘さ</p>
+            <div class="pill-row">
+              <label class="pill"><input type="radio" name="sweet"> ひかえめ</label>
+              <label class="pill"><input type="radio" name="sweet" checked> バランス</label>
+              <label class="pill"><input type="radio" name="sweet"> 甘め</label>
+            </div>
+          </div>
         </div>
 
-        <!-- STEP 3 ニンニク・甘さ -->
+        <!-- STEP 3 -->
         <div class="custom-step">
-          <div class="step-label">STEP 3</div>
-          <h3>ニンニク・甘さの調整</h3>
-          <p class="step-desc">匂いや味のバランスを選べます。</p>
-          <label class="field-label">ニンニクの強さ</label>
-          <select name="garlic">
-            <option value="なし">なし（仕事前でも安心）</option>
-            <option value="ひかえめ" selected>ひかえめ</option>
-            <option value="ふつう">ふつう</option>
-            <option value="しっかり">しっかり</option>
-          </select>
-
-          <label class="field-label">甘さのバランス</label>
-          <select name="sweet">
-            <option value="甘さひかえめ">甘さひかえめ</option>
-            <option value="標準" selected>標準</option>
-            <option value="コク甘め">コク甘め</option>
-          </select>
+          <h3><span class="step-badge">STEP 3</span> 追加具材（複数選択可）</h3>
+          <div class="tag-row">
+            <label class="tag-chip"><input type="checkbox"> ニラ</label>
+            <label class="tag-chip"><input type="checkbox"> 長ねぎ</label>
+            <label class="tag-chip"><input type="checkbox"> 大葉</label>
+            <label class="tag-chip"><input type="checkbox"> ごま</label>
+            <label class="tag-chip"><input type="checkbox"> チーズ</label>
+            <label class="tag-chip"><input type="checkbox"> 海鮮だし強め</label>
+          </div>
         </div>
 
-        <!-- STEP 4 トッピング -->
+        <!-- STEP 4 -->
         <div class="custom-step">
-          <div class="step-label">STEP 4</div>
-          <h3>追加トッピング</h3>
-          <p class="step-desc">＋αで味に個性を。</p>
-          <label class="option-row">
-            <input type="checkbox" name="topping" value="ニラ">
-            <span>ニラ</span>
-          </label>
-          <label class="option-row">
-            <input type="checkbox" name="topping" value="長ねぎ">
-            <span>長ねぎ</span>
-          </label>
-          <label class="option-row">
-            <input type="checkbox" name="topping" value="ごま">
-            <span>炒りごま</span>
-          </label>
-          <label class="option-row">
-            <input type="checkbox" name="topping" value="海鮮だし">
-            <span>海鮮だし強め</span>
-          </label>
+          <h3><span class="step-badge">STEP 4</span> サイズ・個数</h3>
+          <div class="option-group">
+            <p class="option-label">サイズ</p>
+            <div class="pill-row">
+              <label class="pill"><input type="radio" name="size" checked> 200g（お試し）</label>
+              <label class="pill"><input type="radio" name="size"> 500g（おすすめ）</label>
+              <label class="pill"><input type="radio" name="size"> 1kg（がっつり）</label>
+            </div>
+          </div>
+          <div class="option-group">
+            <p class="option-label">個数</p>
+            <input type="number" min="1" value="1" class="qty-input">
+          </div>
         </div>
 
-        <!-- STEP 5 サイズ -->
+        <!-- メモ -->
         <div class="custom-step">
-          <div class="step-label">STEP 5</div>
-          <h3>サイズ・個数</h3>
-          <label class="field-label">サイズ</label>
-          <select name="size">
-            <option value="200g">200g（お試し用）</option>
-            <option value="500g" selected>500g（いちばん人気）</option>
-            <option value="1kg">1kg（がっつり）</option>
-          </select>
-
-          <label class="field-label">個数</label>
-          <input type="number" name="qty" min="1" max="10" value="1">
+          <h3><span class="step-badge">OPTION</span> 備考・リクエスト</h3>
+          <textarea rows="3" class="custom-memo" placeholder="例）酸味弱めが好きです／鍋用にしたいので少し濃いめ希望　など"></textarea>
         </div>
 
-        <button type="submit" class="btn-primary full-width">
-          この内容で問い合わせる
+        <button class="btn-primary custom-submit-btn">
+          この内容で注文相談する（LINE / メールへ）
         </button>
         <p class="note">
-          ※今は見積り・お問合せ用ボタンとして使い、<br>
-          後でBASEやフォームに接続してもOKです。
+          ※実際のご注文は、この下の「ご注文方法」からLINEやメールでやり取りする形にしておくと運用しやすいです。
         </p>
-      </form>
+      </div>
 
-      <!-- 右：プレビュー -->
+      <!-- 右：プレビュー／サマリー -->
       <aside class="custom-preview">
         <h3>あなたのカスタムキムチ</h3>
-        <p class="preview-sub">※現時点ではサンプル表示です。</p>
 
-        <div class="preview-block">
-          <h4>ベース野菜</h4>
-          <p>例）白菜キムチ</p>
+        <div class="preview-jar">
+          <div class="jar-lid"></div>
+          <div class="jar-body">
+            <div class="jar-label">
+              <p class="jar-name">オリジナルキムチ</p>
+              <p class="jar-tags">白菜 / 辛さ：ふつう / にんにく：ふつう</p>
+              <p class="jar-size">500g × 1個（サンプル表示）</p>
+            </div>
+          </div>
         </div>
 
-        <div class="preview-block">
-          <h4>味の設定</h4>
+        <div class="preview-summary">
+          <h4>サンプルレシピ</h4>
           <ul>
-            <li>辛さ：ふつう（★★★☆☆）</li>
-            <li>ニンニク：ひかえめ</li>
-            <li>甘さ：標準</li>
+            <li>ベース：白菜キムチ</li>
+            <li>辛さ：ふつう</li>
+            <li>にんにく：ふつう</li>
+            <li>甘さ：バランス</li>
+            <li>追加具材：ニラ・長ねぎ・ごま</li>
+            <li>サイズ：500g × 1個</li>
           </ul>
         </div>
 
-        <div class="preview-block">
-          <h4>トッピング</h4>
-          <p>例）ニラ・長ねぎ・炒りごま</p>
+        <div class="preview-price">
+          <p class="preview-price-label">目安価格</p>
+          <p class="preview-price-value">¥1,000 ～ ¥1,400（税込）</p>
+          <p class="note">※実際の価格は内容と原価に応じて個別にご案内する形にしておくと運用しやすいです。</p>
         </div>
-
-        <div class="preview-block">
-          <h4>容量・個数</h4>
-          <p>500g × 1個</p>
-        </div>
-
-        <div class="price-box">
-          <p class="price-label">目安価格</p>
-          <p class="price-main">¥1,000〜¥1,500（税込）</p>
-          <p class="price-note">※正式な金額は返信時にご案内します。</p>
-        </div>
-
-        <p class="note">
-          JS（動き）を後から足せば、<br>
-          左の選択内容に合わせてここが自動で変わるようにもできます。
-        </p>
       </aside>
     </div>
   </div>
 </section>
+
 
   <!-- カテゴリ一覧 -->
   <section id="categories" class="section section-light">
